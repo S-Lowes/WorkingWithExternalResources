@@ -35,10 +35,10 @@ function writeToDocument(type) {
             var dataRow = [];
             Object.keys(item).forEach(function(key) {
                 var rowData = item[key].toString();
-                var truncatedData = rowData.substring(0, 15);
+                var truncatedData = rowData.substring(0, 15); //shorten info via truncating, takes up less space on screen
                 dataRow.push(`<td>${truncatedData}</td>`);
             });
-            tableRows.push(`<tr>${dataRow}</tr>`)
+            tableRows.push(`<tr>${dataRow}</tr>`) //push onto rows
         });
 
         el.innerHTML = `<table>${tableHeaders}${tableRows}</table>`;

@@ -13,8 +13,8 @@ function getData(type, cb) {
     xhr.send();
 }
 
-function writeToDocument(type) {
+function writeToDocument(type) { //Type comes from the API
     getData(type, function(data) {
-        document.getElementById("data").innerHTML = data;
+        document.getElementById("data").innerHTML = data; //grab the div with the ID of data & set the inner html with the data passed to it.
     });
 }

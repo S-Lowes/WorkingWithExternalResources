@@ -20,7 +20,7 @@ function getTableHeaders(obj) {
         tableHeaders.push(`<td>${key}</td>`)
     });
 
-    return `<tr>${tableHeaders}</tr>`;
+    return `<tr>${tableHeaders}</tr>`; // template literal: interpolate variables and strings
 }
 
 function writeToDocument(type) {
@@ -29,12 +29,12 @@ function writeToDocument(type) {
 
     getData(type, function(data) {
         data = data.results;
-        var tableHeaders = getTableHeaders(data[0]);
+        var tableHeaders = getTableHeaders(data[0]); //once data is retrieved we call the function
 
         data.forEach(function(item) {
             // el.innerHTML += "<p>" + item.name + "</p>";
         });
 
-        el.innerHTML = `<table>${tableHeaders}</table>`;
+        el.innerHTML = `<table>${tableHeaders}</table>`; // start to build table for us so we no longer have to specify what we want to grab
     });
 }

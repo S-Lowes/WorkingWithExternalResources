@@ -15,7 +15,7 @@ function getData(type, cb) {
 
 function writeToDocument(type) {
     var el = document.getElementById("data");
-    el.innerHTML = "";
+    el.innerHTML = ""; //every time a button is clicked the inner html is set to "". ie; its cleared.
 
     getData(type, function(data) {
         data = data.results;

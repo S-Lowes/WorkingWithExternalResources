@@ -28,17 +28,17 @@ function writeToDocument(type) {
     el.innerHTML = "";
 
     getData(type, function(data) {
-        var tableRows = [];
+        var tableRows = []; // create new row for each item from the API
         data = data.results;
         var tableHeaders = getTableHeaders(data[0]);
 
         data.forEach(function(item) {
             var dataRow = [];
 
-            Object.keys(item).forEach(function(key) {
+            Object.keys(item).forEach(function(key) { // same as method above, iterate over our keys & push the element onto our rows
                 dataRow.push(`<td>${item[key]}</td>`);
             });
-            tableRows.push(dataRow)
+            tableRows.push(dataRow) //push data into our tablerows array
         });
 
         el.innerHTML = `<table>${tableHeaders}${tableRows}</table>`;
