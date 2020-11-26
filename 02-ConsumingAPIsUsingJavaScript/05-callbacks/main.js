@@ -1,4 +1,4 @@
-function getData(cb) {
+function getData(cb) { // 'cb' standing for call back. 
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", "https://ci-swapi.herokuapp.com/api/");
@@ -11,7 +11,7 @@ function getData(cb) {
     };
 }
 
-function printDataToConsole(data) {
+function printDataToConsole(data) { //I don't need to use a timeout because we are explicitly envoking our get data function.
     console.log(data);
 }
 

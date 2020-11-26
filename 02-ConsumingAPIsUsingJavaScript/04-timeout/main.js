@@ -10,6 +10,6 @@ xhr.onreadystatechange = function() {
     };
 }
 
-setTimeout(function() {
+setTimeout(function() { //The 2 parameters are; a call back function & a parameter in milliseconds.
     console.log(data);
-}, 500);
+}, 500); //Give the ^^ function enough time to retrieve the data correctly.
